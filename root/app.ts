@@ -20,8 +20,9 @@ const fastify: FastifyInstance = Fastify({
         transport: {
             target: 'pino-pretty',
             options: {
-                destination: path.join(log_path, 'app.log'),
                 colorize: true,
+                translateTime: 'HH:MM:ss Z',
+                destination: path.join(log_path, 'app.log'),
             },
         },
     },
@@ -35,7 +36,6 @@ fastify.register(cors, {
 
 fastify.register(jwtPlugin);
 
-// Proxylar
 fastify.register(httpProxy, {
     upstream: 'http://localhost:8001',
     prefix: '/main',
@@ -56,8 +56,9 @@ fastify.register(httpProxy, {
 
 const start = async () => {
     try {
-        const port: number = parseInt(process.env.PORT || '5050', 10);
+        const port: number = parseInt(process.env.PORT || '5150', 10);
         await fastify.listen({port: port});
+        console.log('listening to port ' + port);
     } catch (e) {
         fastify.log.error(e);
         process.exit(1);
