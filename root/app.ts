@@ -5,6 +5,7 @@ import jwt from '@fastify/jwt';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
+import jwtPlugin from './plugins/jwt';
 
 dotenv.config();
 
@@ -32,3 +33,37 @@ fastify.register(cors, {
     allowedHeaders: ['Content-Type'],
 });
 
+fastify.register(jwtPlugin);
+
+// Proxylar
+fastify.register(httpProxy, {
+    upstream: 'http://localhost:8001',
+    prefix: '/main',
+    rewritePrefix: '',
+});
+
+fastify.register(httpProxy, {
+    upstream: 'http://localhost:8002',
+    prefix: '/call',
+    rewritePrefix: '',
+});
+
+fastify.register(httpProxy, {
+    upstream: 'http://localhost:8003',
+    prefix: '/report',
+    rewritePrefix: '',
+});
+
+const start = async () => {
+    try {
+        const port: number = parseInt(process.env.PORT || '5050', 10);
+        await fastify.listen({port: port});
+    } catch (e) {
+        fastify.log.error(e);
+        process.exit(1);
+    }
+}
+
+(async () => {
+    await start();
+})();
