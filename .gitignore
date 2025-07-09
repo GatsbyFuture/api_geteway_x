@@ -1,0 +1,57 @@
+# Node.js related
+node_modules/              # Dependency packages
+npm-debug.log             # npm debugging logs
+yarn-error.log            # Yarn error logs
+yarn.lock                 # Yarn lock file
+package-lock.json         # npm lock file
+.pnpm-lock.yaml           # pnpm lock file (if using pnpm)
+
+# Fastify specific
+dist/                     # Build output directory
+build/                    # Alternative build directory
+.env                      # Environment variables file
+.env.*                    # Other environment files (e.g., .env.development)
+!.env.example             # Keep example env file
+config/local.json         # Local configuration files (if used)
+
+# Logs
+#logs/                     # Log directory
+#*.log                     # All log files
+#*.log.*                   # Rotated log files (e.g., app.log.1)
+
+# Coverage reports
+coverage/                 # Test coverage reports
+.nyc_output/              # Temporary coverage output
+
+# Temporary files
+*.tmp                     # Temporary files
+*.temp                    # Alternative temp files
+*.swp                     # Vim swap files
+*.swo                     # Vim swap files
+
+# OS generated files
+.DS_Store                 # macOS system files
+Thumbs.db                 # Windows thumbnail cache
+desktop.ini               # Windows folder customization
+
+# IDE and editor files
+.vscode/                  # VS Code settings
+.idea/                    # JetBrains IDE settings
+*.sublime-*               # Sublime Text files
+*.code-workspace          # VS Code workspace files
+
+# Testing
+test-results/             # Test result files
+junit.xml                 # JUnit test reports
+*.test.js                 # Temporary test files (if needed)
+
+# Production
+/public/build/            # Static assets build folder (if used)
+/public/uploads/          # User-uploaded files (if applicable)
+
+# Miscellaneous
+*.bak                     # Backup files
+*.gho                     # Ghost backup files
+*.orig                    # Original files from diffs
+*.rej                     # Patch reject filesnode_modules/
+node_modules/
