@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+    image: api-gateway-x:latest
+    container_name: api-gateway
+    network_mode: host
+    ports:
+      - "5150:5150"
+    restart: unless-stopped

@@ -1,7 +1,6 @@
 import Fastify, {FastifyRequest, FastifyReply, FastifyInstance} from 'fastify';
 import cors from '@fastify/cors'
 import httpProxy from '@fastify/http-proxy';
-import jwt from '@fastify/jwt';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
@@ -37,21 +36,28 @@ fastify.register(cors, {
 fastify.register(jwtPlugin);
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:8001',
+    upstream: 'http://localhost:5250',
     prefix: '/main',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:8002',
+    upstream: 'http://localhost:5350',
     prefix: '/call',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:8003',
+    upstream: 'http://localhost:5450',
     prefix: '/report',
     rewritePrefix: '',
+});
+
+fastify.get('/', async (_request: FastifyRequest, reply: FastifyReply) => {
+    return reply.code(200).send({
+        success: true,
+        message: 'All right!',
+    });
 });
 
 const start = async () => {
