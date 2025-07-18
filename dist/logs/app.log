@@ -1,0 +1,704 @@
+[06:37:46 UTC] [32mINFO[39m (25697): [36mServer listening at http://127.0.0.1:5150[39m
+[06:38:07 UTC] [32mINFO[39m (25697): [36mincoming request[39m
+    reqId: "req-1"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 33876
+    }
+[06:38:07 UTC] [32mINFO[39m (25697): [36mrequest completed[39m
+    reqId: "req-1"
+    res: {
+      "statusCode": 401
+    }
+    responseTime: 9.223092999309301
+[06:38:59 UTC] [32mINFO[39m (25915): [36mServer listening at http://127.0.0.1:5150[39m
+[06:39:04 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-1"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51218
+    }
+[06:39:04 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-1"
+    res: {
+      "statusCode": 401
+    }
+    responseTime: 10.443136999383569
+[06:42:46 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-2"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51630
+    }
+[06:42:46 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-2"
+    res: {
+      "statusCode": 401
+    }
+    responseTime: 2.023175999522209
+[06:45:38 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-3"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 38738
+    }
+[06:45:38 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-3"
+    res: {
+      "statusCode": 401
+    }
+    responseTime: 1.2906910013407469
+[06:46:34 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-4"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 38738
+    }
+[06:46:34 UTC] [32mINFO[39m (25915): [36mfetching from remote server[39m
+    reqId: "req-4"
+    source: "/auth/login"
+[06:46:34 UTC] [33mWARN[39m (25915): [36mresponse errored[39m
+    reqId: "req-4"
+    err: {
+      "type": "Error",
+      "message": "connect ECONNREFUSED 127.0.0.1:5250",
+      "stack":
+          Error: connect ECONNREFUSED 127.0.0.1:5250
+              at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+      "errno": -111,
+      "code": "ECONNREFUSED",
+      "syscall": "connect",
+      "address": "127.0.0.1",
+      "port": 5250
+    }
+[06:46:34 UTC] [31mERROR[39m (25915): [36mconnect ECONNREFUSED 127.0.0.1:5250[39m
+    reqId: "req-4"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150"
+    }
+    res: {
+      "statusCode": 500
+    }
+    err: {
+      "type": "FastifyError",
+      "message": "connect ECONNREFUSED 127.0.0.1:5250",
+      "stack":
+          FastifyError: connect ECONNREFUSED 127.0.0.1:5250
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/@fastify/reply-from/index.js:188:36
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/@fastify/reply-from/index.js:289:9
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/@fastify/reply-from/lib/request.js:171:9
+              at RequestHandler.runInAsyncScope (node:async_hooks:214:14)
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/undici/lib/api/api-request.js:148:14
+              at node:internal/process/task_queues:151:7
+              at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+              at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      "code": "FST_REPLY_FROM_INTERNAL_SERVER_ERROR",
+      "name": "FastifyError",
+      "statusCode": 500
+    }
+[06:46:34 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-4"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 16.149921998381615
+[06:46:53 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-5"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 38738
+    }
+[06:46:53 UTC] [32mINFO[39m (25915): [36mfetching from remote server[39m
+    reqId: "req-5"
+    source: "/auth/login"
+[06:46:53 UTC] [32mINFO[39m (25915): [36mresponse received[39m
+    reqId: "req-5"
+[06:46:53 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-5"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 209.59040000103414
+[06:47:11 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-6"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 38738
+    }
+[06:47:11 UTC] [32mINFO[39m (25915): [36mfetching from remote server[39m
+    reqId: "req-6"
+    source: "/user/create"
+[06:47:11 UTC] [32mINFO[39m (25915): [36mresponse received[39m
+    reqId: "req-6"
+[06:47:11 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-6"
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 8.268937999382615
+[06:49:15 UTC] [32mINFO[39m (25915): [36mincoming request[39m
+    reqId: "req-7"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 42140
+    }
+[06:49:15 UTC] [32mINFO[39m (25915): [36mfetching from remote server[39m
+    reqId: "req-7"
+    source: "/user/create"
+[06:49:15 UTC] [32mINFO[39m (25915): [36mresponse received[39m
+    reqId: "req-7"
+[06:49:15 UTC] [32mINFO[39m (25915): [36mrequest completed[39m
+    reqId: "req-7"
+    res: {
+      "statusCode": 404
+    }
+    responseTime: 8.315360000357032
+[06:49:34 UTC] [32mINFO[39m (26809): [36mServer listening at http://127.0.0.1:5150[39m
+[06:49:41 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-1"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 47810
+    }
+[06:49:41 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-1"
+    source: "/user/create"
+[06:49:41 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-1"
+[06:49:41 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-1"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 235.4588719997555
+[07:05:20 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-2"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 41676
+    }
+[07:05:20 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-2"
+    source: "/user/create"
+[07:05:20 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-2"
+[07:05:20 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-2"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 225.70392999984324
+[07:13:09 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-3"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 58672
+    }
+[07:13:09 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-3"
+    source: "/user/create"
+[07:13:10 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-3"
+[07:13:10 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-3"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 285.9917720016092
+[07:13:33 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-4"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 58672
+    }
+[07:13:33 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-4"
+    source: "/user/create"
+[07:13:33 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-4"
+[07:13:33 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-4"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 10.026037000119686
+[07:13:34 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-5"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 58672
+    }
+[07:13:34 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-5"
+    source: "/user/create"
+[07:13:34 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-5"
+[07:13:34 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-5"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 9.236193999648094
+[07:16:21 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-6"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:16:21 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-6"
+    source: "/auth/login"
+[07:16:21 UTC] [33mWARN[39m (26809): [36mresponse errored[39m
+    reqId: "req-6"
+    err: {
+      "type": "Error",
+      "message": "connect ECONNREFUSED 127.0.0.1:5250",
+      "stack":
+          Error: connect ECONNREFUSED 127.0.0.1:5250
+              at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+      "errno": -111,
+      "code": "ECONNREFUSED",
+      "syscall": "connect",
+      "address": "127.0.0.1",
+      "port": 5250
+    }
+[07:16:21 UTC] [31mERROR[39m (26809): [36mconnect ECONNREFUSED 127.0.0.1:5250[39m
+    reqId: "req-6"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150"
+    }
+    res: {
+      "statusCode": 500
+    }
+    err: {
+      "type": "FastifyError",
+      "message": "connect ECONNREFUSED 127.0.0.1:5250",
+      "stack":
+          FastifyError: connect ECONNREFUSED 127.0.0.1:5250
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/@fastify/reply-from/index.js:188:36
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/@fastify/reply-from/index.js:289:9
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/@fastify/reply-from/lib/request.js:171:9
+              at RequestHandler.runInAsyncScope (node:async_hooks:214:14)
+              at /media/jack/diske/micro_service_x/api_gateway_x/node_modules/undici/lib/api/api-request.js:148:14
+              at node:internal/process/task_queues:151:7
+              at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+              at AsyncResource.runMicrotask (node:internal/process/task_queues:148:8)
+              at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      "code": "FST_REPLY_FROM_INTERNAL_SERVER_ERROR",
+      "name": "FastifyError",
+      "statusCode": 500
+    }
+[07:16:21 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-6"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 5.801722999662161
+[07:16:33 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-7"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:16:33 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-7"
+    source: "/auth/login"
+[07:16:33 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-7"
+[07:16:33 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-7"
+    res: {
+      "statusCode": 400
+    }
+    responseTime: 22.74429799988866
+[07:17:08 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-8"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:17:08 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-8"
+    source: "/user/create"
+[07:17:08 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-8"
+[07:17:08 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-8"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 15.935009000822902
+[07:17:57 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-9"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:17:57 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-9"
+    source: "/auth/login"
+[07:17:57 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-9"
+[07:17:57 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-9"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 224.21413800120354
+[07:18:06 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-a"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:18:06 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-a"
+    source: "/auth/login"
+[07:18:07 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-a"
+[07:18:07 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-a"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 207.9708849992603
+[07:18:09 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-b"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:18:09 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-b"
+    source: "/auth/login"
+[07:18:09 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-b"
+[07:18:09 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-b"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 190.49402200058103
+[07:18:11 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-c"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:18:11 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-c"
+    source: "/auth/login"
+[07:18:11 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-c"
+[07:18:11 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-c"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 167.1021520011127
+[07:18:12 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-d"
+    req: {
+      "method": "POST",
+      "url": "/main/auth/login",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:18:12 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-d"
+    source: "/auth/login"
+[07:18:12 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-d"
+[07:18:12 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-d"
+    res: {
+      "statusCode": 200
+    }
+    responseTime: 159.97520199976861
+[07:18:20 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-e"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:18:20 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-e"
+    source: "/user/create"
+[07:18:20 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-e"
+[07:18:20 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-e"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 6.86706200055778
+[07:18:31 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-f"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 52014
+    }
+[07:18:31 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-f"
+    source: "/user/create"
+[07:18:31 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-f"
+[07:18:31 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-f"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 9.566813001409173
+[08:04:36 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-g"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 44408
+    }
+[08:04:36 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-g"
+    source: "/user/create"
+[08:04:36 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-g"
+[08:04:36 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-g"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 38.818410001695156
+[08:12:08 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-h"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 50438
+    }
+[08:12:08 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-h"
+    source: "/user/create"
+[08:12:08 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-h"
+[08:12:08 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-h"
+    res: {
+      "statusCode": 500
+    }
+    responseTime: 32.502879999578
+[08:18:23 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-i"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:23 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-i"
+    source: "/user/create"
+[08:18:23 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-i"
+[08:18:23 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-i"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 37.06868300028145
+[08:18:32 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-j"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:32 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-j"
+    source: "/user/create"
+[08:18:32 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-j"
+[08:18:32 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-j"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 11.27008800022304
+[08:18:33 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-k"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:33 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-k"
+    source: "/user/create"
+[08:18:33 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-k"
+[08:18:33 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-k"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 9.015272000804543
+[08:18:35 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-l"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:35 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-l"
+    source: "/user/create"
+[08:18:35 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-l"
+[08:18:35 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-l"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 8.245502000674605
+[08:18:36 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-m"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:36 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-m"
+    source: "/user/create"
+[08:18:36 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-m"
+[08:18:36 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-m"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 6.233842000365257
+[08:18:37 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-n"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:37 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-n"
+    source: "/user/create"
+[08:18:37 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-n"
+[08:18:37 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-n"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 8.47677099891007
+[08:18:39 UTC] [32mINFO[39m (26809): [36mincoming request[39m
+    reqId: "req-o"
+    req: {
+      "method": "POST",
+      "url": "/main/user/create",
+      "host": "localhost:5150",
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45326
+    }
+[08:18:39 UTC] [32mINFO[39m (26809): [36mfetching from remote server[39m
+    reqId: "req-o"
+    source: "/user/create"
+[08:18:39 UTC] [32mINFO[39m (26809): [36mresponse received[39m
+    reqId: "req-o"
+[08:18:39 UTC] [32mINFO[39m (26809): [36mrequest completed[39m
+    reqId: "req-o"
+    res: {
+      "statusCode": 409
+    }
+    responseTime: 8.227205999195576
+[09:16:00 UTC] [32mINFO[39m (7568): [36mServer listening at http://127.0.0.1:5150[39m

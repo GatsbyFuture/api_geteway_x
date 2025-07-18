@@ -14,8 +14,8 @@ export default fp(async (fastify) => {
     // fastify.addHook...
     fastify.addHook('onRequest', async (req: FastifyRequest, reply: FastifyReply) => {
         if (
-            req.url.startsWith('/user/login') ||
-            req.url.startsWith('/user/register')
+            req.url === '/' ||
+            req.url.startsWith('/main/auth/login')
         ) return;
 
         const authHeader = req.headers['authorization'];
@@ -28,7 +28,7 @@ export default fp(async (fastify) => {
 
         try {
             const decoded = fastify.jwt.verify<JwtPayload>(token);
-            req.headers['x-user-id'] = decoded.user_id;
+            req.headers['x-user-id'] = decoded.id.toString();
             req.headers['x-user-role'] = decoded.role;
         } catch {
             return reply.code(401).send({error: 'Invalid token'});

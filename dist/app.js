@@ -21,8 +21,9 @@ const fastify = (0, fastify_1.default)({
         transport: {
             target: 'pino-pretty',
             options: {
-                destination: path_1.default.join(log_path, 'app.log'),
                 colorize: true,
+                translateTime: 'HH:MM:ss Z',
+                destination: path_1.default.join(log_path, 'app.log'),
             },
         },
     },
@@ -34,24 +35,31 @@ fastify.register(cors_1.default, {
 });
 fastify.register(jwt_1.default);
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:8001',
+    upstream: 'http://localhost:5250',
     prefix: '/main',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:8002',
+    upstream: 'http://localhost:5350',
     prefix: '/call',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:8003',
+    upstream: 'http://localhost:5450',
     prefix: '/report',
     rewritePrefix: '',
 });
+fastify.get('/', async (_request, reply) => {
+    return reply.code(200).send({
+        success: true,
+        message: 'All right!',
+    });
+});
 const start = async () => {
     try {
-        const port = parseInt(process.env.PORT || '5050', 10);
+        const port = parseInt(process.env.PORT || '5150', 10);
         await fastify.listen({ port: port });
+        console.log('listening to port ' + port);
     }
     catch (e) {
         fastify.log.error(e);

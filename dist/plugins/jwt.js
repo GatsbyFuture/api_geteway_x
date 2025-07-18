@@ -13,8 +13,8 @@ exports.default = (0, fastify_plugin_1.default)(async (fastify) => {
     });
     // fastify.addHook...
     fastify.addHook('onRequest', async (req, reply) => {
-        if (req.url.startsWith('/user/login') ||
-            req.url.startsWith('/user/register'))
+        if (req.url === '/' ||
+            req.url.startsWith('/main/auth/login'))
             return;
         const authHeader = req.headers['authorization'];
         if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -23,7 +23,7 @@ exports.default = (0, fastify_plugin_1.default)(async (fastify) => {
         const token = authHeader.split(' ')[1];
         try {
             const decoded = fastify.jwt.verify(token);
-            req.headers['x-user-id'] = decoded.user_id;
+            req.headers['x-user-id'] = decoded.id.toString();
             req.headers['x-user-role'] = decoded.role;
         }
         catch {
