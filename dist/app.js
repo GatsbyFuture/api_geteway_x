@@ -29,9 +29,12 @@ const fastify = (0, fastify_1.default)({
     },
 });
 fastify.register(cors_1.default, {
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
+    origin: (origin, cb) => {
+        cb(null, true);
+    },
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: false
 });
 fastify.register(jwt_1.default);
 fastify.register(http_proxy_1.default, {
@@ -58,7 +61,7 @@ fastify.get('/', async (_request, reply) => {
 const start = async () => {
     try {
         const port = parseInt(process.env.PORT || '5150', 10);
-        await fastify.listen({ port: port });
+        await fastify.listen({ port: port, host: '0.0.0.0' });
         console.log('listening to port ' + port);
     }
     catch (e) {

@@ -702,3 +702,9 @@
     }
     responseTime: 8.227205999195576
 [09:16:00 UTC] [32mINFO[39m (7568): [36mServer listening at http://127.0.0.1:5150[39m
+[10:07:47 UTC] [32mINFO[39m (45924): [36mServer listening at http://127.0.0.1:5150[39m
+[10:07:47 UTC] [32mINFO[39m (45924): [36mServer listening at http://192.168.100.102:5150[39m
+[10:07:47 UTC] [32mINFO[39m (45924): [36mServer listening at http://192.168.100.7:5150[39m
+[10:07:47 UTC] [32mINFO[39m (45924): [36mServer listening at http://172.26.239.6:5150[39m
+[10:07:47 UTC] [32mINFO[39m (45924): [36mServer listening at http://172.17.0.1:5150[39m
+[10:07:47 UTC] [32mINFO[39m (45924): [36mServer listening at http://172.20.0.1:5150[39m
