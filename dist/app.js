@@ -44,11 +44,16 @@ fastify.register(http_proxy_1.default, {
 });
 fastify.register(http_proxy_1.default, {
     upstream: 'http://localhost:5350',
-    prefix: '/call',
+    prefix: '/client',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
     upstream: 'http://localhost:5450',
+    prefix: '/call',
+    rewritePrefix: '',
+});
+fastify.register(http_proxy_1.default, {
+    upstream: 'http://localhost:5550',
     prefix: '/report',
     rewritePrefix: '',
 });

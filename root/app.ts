@@ -56,6 +56,12 @@ fastify.register(httpProxy, {
     rewritePrefix: '',
 });
 
+fastify.register(httpProxy, {
+    upstream: 'http://localhost:5550',
+    prefix: '/report',
+    rewritePrefix: '',
+});
+
 fastify.get('/', async (_request: FastifyRequest, reply: FastifyReply) => {
     return reply.code(200).send({
         success: true,
