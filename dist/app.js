@@ -57,6 +57,16 @@ fastify.register(http_proxy_1.default, {
     prefix: '/report',
     rewritePrefix: '',
 });
+fastify.register(http_proxy_1.default, {
+    upstream: 'http://localhost:5650',
+    prefix: '/kanban',
+    rewritePrefix: '',
+});
+fastify.register(http_proxy_1.default, {
+    upstream: 'http://localhost:5750',
+    prefix: '/crm',
+    rewritePrefix: '',
+});
 fastify.get('/', async (_request, reply) => {
     return reply.code(200).send({
         success: true,
