@@ -39,37 +39,37 @@ fastify.register(cors, {
 fastify.register(jwtPlugin);
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:5250',
+    upstream: 'http://localhost:5050',
     prefix: '/main',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:5350',
+    upstream: 'http://localhost:5100',
     prefix: '/client',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:5450',
+    upstream: 'http://localhost:5150',
     prefix: '/call',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:5550',
+    upstream: 'http://localhost:5200',
     prefix: '/report',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:5650',
+    upstream: 'http://localhost:5250',
     prefix: '/kanban',
     rewritePrefix: '',
 });
 
 fastify.register(httpProxy, {
-    upstream: 'http://localhost:5750',
+    upstream: 'http://localhost:5300',
     prefix: '/crm',
     rewritePrefix: '',
 });
@@ -83,7 +83,7 @@ fastify.get('/', async (_request: FastifyRequest, reply: FastifyReply) => {
 
 const start = async () => {
     try {
-        const port: number = parseInt(process.env.PORT || '5150', 10);
+        const port: number = parseInt(process.env.PORT || '5001', 10);
         await fastify.listen({port: port, host: '0.0.0.0'});
         console.log('listening to port ' + port);
     } catch (e) {

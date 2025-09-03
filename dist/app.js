@@ -38,32 +38,32 @@ fastify.register(cors_1.default, {
 });
 fastify.register(jwt_1.default);
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:5250',
+    upstream: 'http://localhost:5050',
     prefix: '/main',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:5350',
+    upstream: 'http://localhost:5100',
     prefix: '/client',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:5450',
+    upstream: 'http://localhost:5150',
     prefix: '/call',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:5550',
+    upstream: 'http://localhost:5200',
     prefix: '/report',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:5650',
+    upstream: 'http://localhost:5250',
     prefix: '/kanban',
     rewritePrefix: '',
 });
 fastify.register(http_proxy_1.default, {
-    upstream: 'http://localhost:5750',
+    upstream: 'http://localhost:5300',
     prefix: '/crm',
     rewritePrefix: '',
 });
@@ -75,7 +75,7 @@ fastify.get('/', async (_request, reply) => {
 });
 const start = async () => {
     try {
-        const port = parseInt(process.env.PORT || '5150', 10);
+        const port = parseInt(process.env.PORT || '5001', 10);
         await fastify.listen({ port: port, host: '0.0.0.0' });
         console.log('listening to port ' + port);
     }

@@ -6,5 +6,5 @@ services:
     container_name: api-gateway
     network_mode: host
     ports:
-      - "5150:5150"
+      - "5000:5000"
     restart: unless-stopped

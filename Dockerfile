@@ -10,6 +10,6 @@ COPY dist ./dist
 
 COPY .env .env
 
-EXPOSE 5150
+EXPOSE 5000
 
 CMD ["node", "dist/app.js"]
