@@ -67,6 +67,11 @@ fastify.register(http_proxy_1.default, {
     prefix: '/crm',
     rewritePrefix: '',
 });
+fastify.register(http_proxy_1.default, {
+    upstream: 'http://localhost:5350',
+    prefix: '/social',
+    rewritePrefix: '',
+});
 fastify.get('/', async (_request, reply) => {
     return reply.code(200).send({
         success: true,
